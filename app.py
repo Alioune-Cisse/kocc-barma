@@ -62,23 +62,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/home.html')
 
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/home.html')
 
 @app.route('/transform')
 def transform():
-    return render_template('transformer.html')
+    return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/transformer.html')
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/about.html')
 
 @app.route('/araf')
 def araf():
-    return render_template('araf.html', data=dictionnaires, zip=zip, np=np, couleurs=couleurs)
+    return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/araf.html', data=dictionnaires, zip=zip, np=np, couleurs=couleurs)
 
 @app.route('/research', methods=['GET', 'POST'])
 def research():
@@ -87,10 +87,10 @@ def research():
             text = request.form['search']
             nw = request.form['size']
             prediction = predict(dataset, model, text=text, next_words=int(nw))
-            return render_template('home.html',  data=" ".join(prediction).capitalize())
+            return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/home.html',  data=" ".join(prediction).capitalize())
 
     else:
-        return render_template('home.html')
+        return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/home.html')
 
 @app.route('/research_t', methods=['GET', 'POST'])
 def research_t():
@@ -102,7 +102,7 @@ def research_t():
             return render_template('transformer.html',  data_t=" ".join(prediction).capitalize())
 
     else:
-        return render_template('home.html')
+        return render_template('https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/blob/master/templates/home.html')
 
 
 if __name__ == "__main__":
