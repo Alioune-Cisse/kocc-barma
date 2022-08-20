@@ -37,10 +37,10 @@ dictionnaires = dataset.get_alphabet()
 #train(dataset, model, args)
 
 #model = Model(dataset)
-model.load_state_dict(torch.load("our-model.pth"))
+model.load_state_dict(torch.load("https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/raw/master/our-model.pth"))
 model.eval()
 
-model_transform.load_state_dict(torch.load("model-generator.pth"))
+model_transform.load_state_dict(torch.load("https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/raw/master/model-generator.pth"))
 model_transform.eval()
 
 couleurs = ["#8dd3c7",
