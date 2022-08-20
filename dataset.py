@@ -21,7 +21,7 @@ class Dataset(torch.utils.data.Dataset):
         #train_df = pd.read_csv('data/reddit-cleanjokes.csv')
         #text = train_df['Joke'].str.cat(sep=' ')
         # load ascii text and covert to lowercase
-        filename = "wolof_datasets.txt"
+        filename = "https://github.com/Alioune-Cisse/pytorch-wolof-text-generator/raw/master/wolof_datasets.txt"
         raw_text = open(filename, 'r', encoding='utf-8').read()
         text_sale = raw_text.replace("\n"," ").lower()
         #text = re.sub('\W+',' ', text_sale)
